@@ -1,0 +1,3 @@
+datfilename=J9TraceFormat.dat
+executable=j9hook
+j9hook.0 0 1 1 N Trc_Hook_Dispatch_Exceed_Threshold_Event "  Warning - The hookFunction, which is registered in %s, is taking too long(%zu milliseconds)."

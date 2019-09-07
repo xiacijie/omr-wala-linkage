@@ -1,0 +1,7 @@
+datfilename=J9TraceFormat.dat
+executable=j9utilcore
+j9utilcore.0 1 1 1 N Trc_Utilcore_decodeUTF8CharN_EmbdeddedNul "* decodeUTF8CharN - embedded NUL character found"
+j9utilcore.1 1 1 1 N Trc_Utilcore_decodeUTF8CharN_Truncated "* decodeUTF8CharN - not enough data left"
+j9utilcore.2 1 1 1 N Trc_Utilcore_decodeUTF8CharN_Invalid2ByteEncoding "* decodeUTF8CharN - invalid 2 byte encoding (0x%x)"
+j9utilcore.3 1 1 1 N Trc_Utilcore_decodeUTF8CharN_Invalid3ByteEncoding "* decodeUTF8CharN - invalid 3 byte encoding (0x%x)"
+j9utilcore.4 1 1 1 N Trc_Utilcore_decodeUTF8CharN_EncodingTooLarge "* decodeUTF8CharN - invalid encoding (0x%x)"

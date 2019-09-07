@@ -1,0 +1,16 @@
+datfilename=OMRTraceFormat.dat
+executable=omrti
+omrti.0 2 1 1 N Trc_OMRTI_omrtiGetMemoryCategories_Entry " >GetMemoryCategories max_categories=%d categories_buffer=%p written_count_ptr=%p total_categories_ptr=%p"
+omrti.1 5 1 1 N Trc_OMRTI_omrtiGetMemoryCategories_WrongVersion_Exit "*<GetMemoryCategories failing with OMRTI_ERROR_UNSUPPORTED_VERSION: unmatched version %d"
+omrti.2 5 1 1 N Trc_OMRTI_omrtiGetMemoryCategories_AllOutputsNull_Exit "*<GetMemoryCategories failing with OMRTI_ERROR_ILLEGAL_ARGUMENT: categories_buffer, written_count_ptr and total_categories_ptr are all NULL."
+omrti.3 5 1 1 N Trc_OMRTI_omrtiGetMemoryCategories_NullOutput_Exit "*<GetMemoryCategories failing with OMRTI_ERROR_ILLEGAL_ARGUMENT: no categories_buffer pointer specified. max_categories=%d"
+omrti.4 5 1 1 N Trc_OMRTI_omrtiGetMemoryCategories_NullWrittenPtr_Exit "*<GetMemoryCategories failing with OMRTI_ERROR_ILLEGAL_ARGUMENT, categories_buffer & max_categories are set, but written_count_ptr is NULL. max_categories=%d, categories_buffer=%p"
+omrti.5 5 1 1 N Trc_OMRTI_omrtiGetMemoryCategories_J9MemAllocFail_Exit "*<GetMemoryCategories failing with OMR_ERROR_INTERNAL, unable to allocate %d bytes for internal categories buffer"
+omrti.6 1 1 1 N Trc_OMRTI_omrtiGetMemoryCategories_BufferOverflow "* GetMemoryCategories categories_buffer overflowed (output will be truncated, return code will be OMRTI_ERROR_OUT_OF_MEMORY)"
+omrti.7 4 1 1 N Trc_OMRTI_omrtiGetMemoryCategories_Exit " <GetMemoryCategories returning %d"
+omrti.8 0 1 5 N Trc_OMRPROF_MethodSampleStart "  MTH_S: %p"
+omrti.9 0 1 5 N Trc_OMRPROF_MethodSampleContinue "  MTH_C: %p"
+omrti.10 0 1 3 N Trc_OMRPROF_insertMethodDictionary_success "  insertMethodDictionary: %p %s"
+omrti.11 0 1 3 N Trc_OMRPROF_insertMethodDictionary_replaceExistingEntry "  insertMethodDictionary: replace existing entry %p %s"
+omrti.12 1 1 3 N Trc_OMRPROF_insertMethodDictionary_failed "* insertMethodDictionary: failed(rc=%d) %p %s"
+omrti.13 0 1 3 N Trc_OMRPROF_methodDictionaryHighWaterMark "  methodDictionary highWaterMark=%u bytes (%u entries of %u bytes each, plus %u name bytes)"

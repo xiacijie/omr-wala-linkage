@@ -1,0 +1,4 @@
+datfilename=OMRTraceFormat.dat
+executable=omrvm
+omrvm.0 0 1 3 N Trc_OMRVM_PostForkChild "  omr_vm_postForkChild forkGeneration=%zu parent pid=%zu"
+omrvm.1 12 1 1 N Assert_OMRVM_true "* ** ASSERTION FAILED ** at %s:%d: %s"

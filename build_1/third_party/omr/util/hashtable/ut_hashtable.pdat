@@ -1,0 +1,7 @@
+datfilename=J9TraceFormat.dat
+executable=hashtable
+hashtable.0 12 1 1 N Assert_hashTable_true "* ** ASSERTION FAILED ** at %s:%d: %s"
+hashtable.1 12 1 1 N Assert_hashTable_false "* ** ASSERTION FAILED ** at %s:%d: %s"
+hashtable.2 12 1 1 N Assert_hashTable_unreachable "* ** ASSERTION FAILED ** at %s:%d: %s"
+hashtable.3 2 1 1 N Trc_hashTable_listToTree_Entry " >HashTable start converting list to tree: tableName=%s, tableAddress=%p, head=%p, listLength=%zu"
+hashtable.4 4 1 1 N Trc_hashTable_listToTree_Exit " <HashTable finish converting list to tree: rc=%zu tree=%p "

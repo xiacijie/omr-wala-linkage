@@ -1,0 +1,38 @@
+matrix:
+  include:
+    - os: linux
+      language: cpp
+      compiler: gcc
+      dist: xenial
+      cache: ccache
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+            - llvm-toolchain-xenial-8
+          packages:
+            - gcc
+            - cmake
+            - ninja-build
+            - clang-8
+            - llvm-8
+            - llvm-8-dev
+            - bison
+    - os: osx
+      compiler: clang
+      language: cpp
+      osx_image: xcode10.1
+      cache: ccache
+      install:
+        - brew install llvm@8
+        - brew install ninja
+        - brew install ccache
+before_script:
+  - ulimit -c unlimited
+  - ccache -s -z
+script:
+  - mkdir build && cd build
+  - cmake -G Ninja ..
+  - ninja
+after_script:
+  - ccache -s
